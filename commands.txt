@@ -1,0 +1,33 @@
+INSTALLING MODULE
+pip install django
+
+CREATE PROJECT
+django-admin startproject blog_project
+
+RUN PROJECT
+python manage.py runserver
+
+CREATE AN APPLICATION
+python manage.py startapp home
+python manage.py startapp core
+
+REGISTER APP IN settings.py
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "core",
+    "home",
+]
+
+
+MVT (DJANGO) & MVC
+MODEL => DATA
+VIEW => FRONTEND LOGIC (MVC) & BUSINESS LOGIC (MVT)
+
+TEMPLATE => MVT => FRONTEND LOGIC
+
+CONTROLLER => MVC => BUSINESS LOGIC
