@@ -21,3 +21,19 @@ def mul(request):
         }
         return render(request, 'mul.html', context)
     return HttpResponse("Bad Request")
+
+def age(request, age):
+    if 'name' in request.GET:
+        context = {
+            'age' : age,
+            'name' : request.GET.get('name')
+        }
+        return render(request, 'age.html', context)
+    return HttpResponse("Bas Request")
+
+def fruits(request):
+    fruits = ['Apple', 'Mango', 'Orange']
+    context = {
+        'fruits' : fruits
+    }
+    return render(request, 'fruits.html', context)
